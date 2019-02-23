@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS CSS Property Example</title>
+    <!-- Created by Mohammed Amr 24/2/2019 -->
+</head>
+<body>
+
+<p>Change the value of the input field:</p>
+
+<div ng-app="" ng-init="myCol='lightblue'">
+    <input style="background-color:{{myCol}}" ng-model="myCol">
+</div>
+<p>The background color of the input box will be whatever you write in the input field.</p>
+</body>
+</html>
