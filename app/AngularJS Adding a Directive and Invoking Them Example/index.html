@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Adding a Directive and Invoking Them Example</title>
+    <!-- Created by Mohammed Amr 24/2/2019 -->
+</head>
+<body ng-app="myApp">
+
+<test-Directive></test-Directive>
+
+<div test-Directive></div>
+
+<div class="class-Directive"></div>
+
+<p><strong>Note:</strong> You must add the value "C" to the restrict property to be able to invoke the directive from a class name.</p>
+
+<!-- directive: comment-Directive -->
+
+<p><strong>Note:</strong> We've added the <strong>replace</strong> property in this example, otherwise the comment would be invisible.</p>
+
+<p><strong>Note:</strong> You must add the value "M" to the <strong>restrict</strong> property to be able to invoke the directive from a comment.</p>
+
+</body>
+</html>
