@@ -1,0 +1,35 @@
+input.ng-empty {
+    background-color: aquamarine;
+}
+
+input.ng-not-empty {
+    background-color: coral;
+}
+
+input.ng-touched {
+    background-color: #555555;
+}
+
+input.ng-untouched {
+    background-color: #b3d4fc;
+}
+
+input.ng-valid {
+    background-color: darkolivegreen;
+}
+
+input.ng-invalid {
+    background-color: red;
+}
+
+input.ng-dirty {
+    background-color: orchid;
+}
+
+input.ng-pending {
+    background-color: yellow;
+}
+
+input.ng-pristine {
+    background-color: blue;
+}

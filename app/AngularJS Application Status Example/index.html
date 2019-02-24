@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Application Status Example</title>
+    <!-- Created by Mohammed Amr 25/2/2019 -->
+</head>
+<body>
+<form ng-app="" name="myForm" ng-init="myText = 'post@myweb.ocm'">
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" required>
+    <p>Edit the e-mail address, and try to change the status.</p>
+    <h1>Status</h1>
+    <p>Valid: {{myForm.myAddress.$valid}} (if true, the value meets all criteria).</p>
+    <p>Dirty: {{myForm.myAddress.$dirty}} (if true, the value has been changed).</p>
+    <p>Touched: {{myForm.myAddress.$touched}} (if true, the value has been in focus).</p>
+</form>
+</body>
+</html>
