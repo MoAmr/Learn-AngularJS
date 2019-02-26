@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" href="app.css">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Tables Example</title>
+    <!-- Created by Mohammed Amr 26/2/2019 -->
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="customersCtrl">
+
+    <table>
+        <tr ng-repeat="x in myData">
+            <td> {{ $index + 1 }}</td>
+            <td ng-if="$odd" style="background-color: cadetblue">
+                {{ x.Name }}
+            </td>
+            <td ng-if="$even">
+                {{ x.Name }}
+            </td>
+            <td ng-if="$odd" style="background-color: cadetblue">
+                {{ x.Country | uppercase }}
+            </td>
+            <td ng-if="$even">
+                {{ x.Country }}
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

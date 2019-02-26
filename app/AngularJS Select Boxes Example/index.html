@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Select Boxes Example</title>
+    <!-- Created by Mohammed Amr 26/2/2019 -->
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+
+    <select ng-model="selectedName" ng-options="x for x in names">
+    </select>
+
+    <select>
+        <option ng-repeat="x in names">
+            {{ x }}
+        </option>
+    </select>
+
+    <p>This example shows how to fill a dropdown list using the ng-options directive.</p><br>
+
+    <p>Select a car:</p>
+
+    <select ng-model="selectedCar">
+        <option ng-repeat="x in cars" value="{{x.model}}">
+            {{x.model}}
+        </option>
+    </select>
+
+    <h1>You selected: {{selectedCar}}</h1>
+
+    <p>When you use the ng-repeat directive to create dropdown lists, the selected value must be a string.</p>
+    <p>In this example you will have to choose between the color or the model to be your selected value.</p><br>
+
+    <p>Select a car:</p>
+
+    <select ng-model="selectedCar" ng-options="y.model for y in cars"></select>
+
+    <h1>You selected: {{ selectedCar.model }}</h1>
+    <p>Its color is: {{ selectedCar.color }}</p>
+
+    <p>When you use the ng-options directive to create dropdown lists, the selected value can be an object.</p>
+    <p>In this example you can display both the model and the color of the selected element.</p>
+
+    <p>Select a car:</p>
+
+    <select ng-model="selectedCar2" ng-options="x for (x, y) in carObjects">
+    </select>
+
+    <h1>You selected: {{selectedCar2.brand}}</h1>
+    <h2>Model: {{selectedCar2.model}}</h2>
+    <h3>Color: {{selectedCar2.color}}</h3>
+
+    <p>This example demonstrates the use of an object as the data source when creating a dropdown list.</p>
+    <p>Note that the selected value represents an object.</p><br>
+
+    <p>Select a car:</p>
+
+    <select ng-model="selectedCar3" ng-options="y.brand for (x, y) in carObjects">
+    </select>
+
+    <h1>You selected: {{selectedCar3.brand}}</h1>
+    <h2>Model: {{selectedCar3.model}}</h2>
+    <h3>Color: {{selectedCar3.color}}</h3>
+
+    <p>The visible text inside the dropdown list can also be a property of the value object.</p>
+
+</div>
+
+</body>
+</html>
