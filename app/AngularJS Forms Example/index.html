@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Forms Example</title>
+    <!-- Created by Mohammed Amr 26/2/2019 -->
+</head>
+<body ng-app="myApp">
+
+<div>
+    <form novalidate>
+
+        Check to show header:
+
+        <input type="checkbox" ng-model="myVar">
+
+        <h1 ng-show="myVar">My Header!</h1>
+
+        <p>The header's ng-show attribute is set to true when the checkbox is checked.</p>
+
+        Pick a topic:
+
+        <input type="radio" ng-model="myVal" value="dogs">Dogs
+        <input type="radio" ng-model="myVal" value="tuts">Tutorials
+        <input type="radio" ng-model="myVal" value="cars">Cars
+
+        <div ng-switch="myVal">
+            <div ng-switch-when="dogs">
+                <h1>Dogs</h1>
+                <p>Welcome to a world of dogs.</p>
+            </div>
+            <div ng-switch-when="tut">
+                <h1>Tutorials</h1>
+                <p>Learn from examples.</p>
+            </div>
+            <div ng-switch-when="cars">
+                <h1>Cars</h1>
+                <p>Read about cars.</p>
+            </div>
+            <p>The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.</p>
+        </div>
+
+        <div>
+            Select a topic:
+            <select ng-model="myValue">
+                <option value="">
+                <option value="dogs">Dogs
+                <option value="tuts">Tutorials
+                <option value="cars">Cars
+            </select>
+        </div>
+
+        <div ng-switch="myValue">
+            <div ng-switch-when="dogs">
+                <h1>Dogs</h1>
+                <p>Welcome to a world of dogs.</p>
+            </div>
+            <div ng-switch-when="tuts">
+                <h1>Tutorials</h1>
+                <p>Learn from examples.</p>
+            </div>
+            <div ng-switch-when="cars">
+                <h1>Cars</h1>
+                <p>Read about cars.</p>
+            </div>
+
+            <p>The ng-switch directive hides and shows HTML sections depending on the value of the dropdown list.</p>
+
+        </div>
+
+        <div ng-controller="formCtrl">
+            First Name:<br>
+            <input type="text" ng-model="user.firstName"><br>
+            Last Name:<br>
+            <input type="text" ng-model="user.lastName"><br>
+            <br><br>
+            <button ng-click="reset()">RESET</button>
+            <p>from = {{ user }}</p>
+            <p>master= {{ master }}</p>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

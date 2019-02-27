@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" href="app.css">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Form Validation Example</title>
+    <!-- Created by Mohammed Amr 27/2/2019 -->
+</head>
+
+<body ng-app="myApp">
+
+<form name="myForm">
+
+    <p>Try writing in the input field:</p>
+
+    <input name="myInput" ng-model="myInput" required><br>
+
+    <p>The input's valid state is:</p>
+    <h1>{{myForm.myInput.$valid}}</h1>
+
+    <p>Try writing an E-mail address in the input field:</p>
+
+    <input name="myEmail" ng-model="myEmail" type="email">
+
+    <p>The input's valid state is:</p>
+    <h1>{{myForm.myEmail.$valid}}</h1>
+    <p>Note that the state of the input field is "true" before you start writing in it, even if it does not contain an e-mail address.</p>
+
+    <p>Try leaving the first input field blank:</p>
+
+    <p>Name:
+    <input name="myName" ng-model="myName" required>
+        <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span>
+    </p>
+
+    <p>Address:
+        <input name="myAddress" ng-model="myAddress" required>
+    </p>
+
+    <p>We use the ng-show directive to only show the error message if the field has been touched AND is empty.</p>
+
+    <p>Try writing in the input field:</p>
+
+    <input name="myNameField" ng-model="myNameField" required>
+
+    <p>The input field requires content, and will therefore become green when you write in it.</p>
+
+    <p>Try writing in the input field:</p>
+
+    <input name="myNameField01" ng-model="myNameField01" required>
+
+    <p>The form gets a "ng-dirty" class when the form has been modified, and will therefore turn pink.</p>
+
+    <p>Try writing in the input field:</p>
+
+    <input name="myInput01" ng-model="myInput01" required my-directive>
+
+    <p>The input's valid state is:</p>
+
+    <h1>{{myForm.myInput01.$valid}}</h1>
+
+    <p>The input field must contain the character "e" to be consider valid.</p>
+
+</form>
+
+</body>
+</html>

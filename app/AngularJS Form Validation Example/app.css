@@ -1,0 +1,12 @@
+input.ng-invalid {
+    background-color: red;
+}
+input.ng-valid {
+    background-color: green;
+}
+form.ng-pristine {
+    background-color: lightblue;
+}
+form.ng-dirty {
+    background-color: pink;
+}

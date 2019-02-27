@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Events Example</title>
+    <!-- Created by Mohammed Amr 26/2/2019 -->
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+
+    <p ng-mousemove="countOver = countOver + 1">Mouse Over Me!</p><br>
+
+    <button ng-click="countClick = countClick + 1">Click Me!</button>
+
+    <button ng-click="clickFunction()">Click Me!</button>
+
+    <h1>{{ countOver }}</h1>
+
+    <h1>{{ countClick }}</h1>
+
+    <button ng-click="myFunc()">Click Me!</button>
+
+    <div ng-show="showMe">
+        <h1>Menu:</h1>
+        <div>Pizza</div>
+        <div>Pasta</div>
+        <div>Pesce</div>
+    </div>
+
+    <p>Click the button to show/hide the menu.</p>
+
+    <h1 ng-mousemove="myCordFunc($event)">Mouse over me!</h1>
+
+    <p>Coordinate: {{ x + ', ' + y }}</p>
+
+    <p>Mouse over the heading to display the value of clientX and clientY from the event object.</p>
+
+</div>
+
+</body>
+</html>
