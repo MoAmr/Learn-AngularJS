@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Include</title>
+    <!-- Created by Mohammed Amr 27/2/2019 -->
+</head>
+
+<body ng-app="myApp1">
+
+<div ng-include="'myFile.html'"></div>
+
+<div ng-include="'https://tryit.w3schools.com/angular_include.php'"></div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function($scope, $http) {
+        $http.get("customers.html").then(function (response) {
+            $scope.names = response.data.records;
+        });
+    });
+</script>
+
+<p>The HTML, and AngularJS code, for this table are located in the file "customers.html".</p>
+
+</body>
+</html>

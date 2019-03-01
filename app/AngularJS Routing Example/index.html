@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-route.js"></script>
+<script src="app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Routing</title>
+    <!-- Created by Mohammed Amr 28/2/2019 -->
+</head>
+
+<body ng-app="myApp">
+
+<p><a href="#/!">Main</a></p>
+
+<a href="#!london">London</a>
+<a href="#!paris">Paris</a>
+
+<p>Note that each "view" has its own controller which each gives the "msg" variable a value.</p>
+
+<div class="ng-view"></div>
+
+<p>Click on the links.</p>
+
+<p>This example uses the ng-view directive as a class attribute to a DIV element.</p>
+
+</body>
+</html>
